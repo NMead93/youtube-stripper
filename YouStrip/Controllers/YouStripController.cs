@@ -18,12 +18,20 @@ namespace YouStrip.Controllers
             return View(allMessages);
         }
 
-        [HttpGet("[action]")]
-        public IActionResult SendMessage()
+        [HttpGet("[action]/{content}")]
+        public IActionResult SendText(string content)
         {
-            Message newMessage = new Message();
+            Message newMessage = new Message(content);
             newMessage.Send();
             return RedirectToAction("Index");
         }
+
+        //[HttpGet("[action]")]
+        //public IActionResult SendMessage()
+        //{
+        //    Message newMessage = new Message();
+        //    newMessage.Send();
+        //    return RedirectToAction("Index");
+        //}
     }
 }

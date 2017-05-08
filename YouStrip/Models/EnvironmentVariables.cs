@@ -11,3 +11,5 @@ namespace YouStrip.Models
         public static string AuthToken = "391d0cfea8007594d54f07e1e9f9ec4c";
     }
 }
+
+//http://stackoverflow.com/questions/36919159/how-to-send-data-to-an-asp-net-controller-with-angular2

@@ -11,13 +11,15 @@ export class NickTestComponent {
 
     constructor(private http: Http) { }
 
-    //sendText(name: string) {
-    //    http.get('/api/YouStrip/
-    //}
-
-    sendDefaultText() {
-        this.http.get('/api/YouStrip/SendMessage').subscribe(result => {
-            console.log("Success");
+    sendText(name: string) {
+        this.http.get('/api/YouStrip/SendText/' + name).subscribe(response => {
+            console.log(name);
         });
     }
+
+    //sendDefaultText() {
+    //    this.http.get('/api/YouStrip/SendMessage').subscribe(result => {
+    //        console.log("Success");
+    //    });
+    //}
 }

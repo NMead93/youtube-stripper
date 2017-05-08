@@ -14,11 +14,11 @@ namespace YouStrip.Models
         public string Body { get; set; }
         public string Status { get; set; }
 
-        public Message()
+        public Message(string content)
         {
             To = "+12064374055";
             From = "+18436287989";
-            Body = "Hey";
+            Body = content;
             Status = "sent";
         }
 
